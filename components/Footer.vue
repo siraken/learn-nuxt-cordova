@@ -4,7 +4,7 @@
       <li>
         <nuxt-link
           to="/"
-          :class="{selected: this.$route.path === '/'}"
+          :class="{selected: $route.path === '/'}"
         >
           <i class="fas fa-fw fa-star" />
           <span>Home</span>
@@ -13,7 +13,7 @@
       <li>
         <nuxt-link
           to="/pay"
-          :class="{selected: this.$route.path === '/pay'}"
+          :class="{selected: $route.path === '/pay'}"
         >
           <i class="fas fa-fw fa-credit-card" />
           <span>Pay</span>
@@ -22,7 +22,7 @@
       <li>
         <nuxt-link
           to="/stores"
-          :class="{selected: this.$route.path === '/stores'}"
+          :class="{selected: $route.path === '/stores'}"
         >
           <i class="fas fa-fw fa-store" />
           <span>Stores</span>
@@ -31,7 +31,7 @@
       <li>
         <nuxt-link
           to="/order"
-          :class="{selected: this.$route.path === '/order'}"
+          :class="{selected: $route.path === '/order'}"
         >
           <i class="fas fa-fw fa-mug-hot" />
           <span>Order</span>
@@ -40,7 +40,7 @@
       <li>
         <nuxt-link
           to="/egift"
-          :class="{selected: this.$route.path === '/egift'}"
+          :class="{selected: $route.path === '/egift'}"
         >
           <i class="fas fa-fw fa-gift" />
           <span>eGift</span>
@@ -61,9 +61,11 @@ export default {
 
 <style lang="scss" scoped>
 footer {
+  background: #fff;
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 20;
   width: 100%;
   border-top: solid 1px #ccc;
 
