@@ -15,5 +15,10 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+  },
+  globals: {
+    'cordova': true,
+    'Camera': true
+  },
 }

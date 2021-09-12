@@ -23,8 +23,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: 'cordova.js' },
-      { src: '/index.js' }
+      { src: 'cordova.js', body: true },
     ]
   },
 

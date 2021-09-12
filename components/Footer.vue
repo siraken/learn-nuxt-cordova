@@ -74,12 +74,13 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 1.05rem;
+    font-size: .75rem;
     line-height: 1;
 
     li {
       a {
         span {
+          font-size: .75rem;
           margin: 4px 0 0 0;
         }
 
@@ -91,6 +92,7 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        font-size: 1rem;
         padding: .5rem 1rem;
       }
     }

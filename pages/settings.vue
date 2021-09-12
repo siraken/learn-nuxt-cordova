@@ -1,15 +1,48 @@
 <template>
   <div>
     <h2>Settings</h2>
+    <img src="" alt="" id="image">
+    <!-- <button id="take_pictures" @click="takePictures()">写真撮影</button> -->
+    <button id="take_pictures" @click="scan()">スキャン</button>
+    {{ scanType }}
   </div>
 </template>
 
 <script>
 export default {
-
+  data () {
+    return {
+      scanType: ''
+    }
+  },
+  methods: {
+    scan (options) {
+      return new Promise((resolve, reject) => {
+        cordova.plugins.barcodeScanner.scan(resolve, reject, options)
+      }).then((res) => {
+        console.log(res)
+        this.scanType = res.text
+      })
+    },
+    takePictures () {
+      navigator.camera.getPicture(this.cameraSuccess, this.cameraError, { quality: 80, destinationType: Camera.DestinationType.DATA_URL })
+    },
+    cameraSuccess (image) {
+      console.log(image)
+      const img = document.getElementById('image')
+      img.src = 'data:image/jpeg;base64,' + image
+    },
+    cameraError (message) {
+      alert('Failed!!: ' + message)
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-
+button {
+  background: #000;
+  color: #fff;
+  padding: 1rem;
+}
 </style>
