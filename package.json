@@ -1,11 +1,12 @@
 {
-  "name": "cordova",
+  "name": "cordova.nuxtapp",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "gen": "nuxt generate",
     "generate": "nuxt generate && wsl rsync -r --delete dist/ app/www/ && replace '/nuxt/' 'nuxt/' app/www -r",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
@@ -25,6 +26,9 @@
     "eslint": "^7.29.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
-    "postcss": "^8.3.5"
+    "fibers": "^5.0.0",
+    "postcss": "^8.3.5",
+    "sass": "^1.39.2",
+    "sass-loader": "^10.2.0"
   }
 }
