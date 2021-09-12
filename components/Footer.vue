@@ -93,7 +93,7 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        font-size: 1rem;
+        font-size: 1.25rem;
         padding: .5rem 1rem;
       }
     }

@@ -67,5 +67,10 @@ export default {
   // Router
   router: {
     mode: 'hash'
+  },
+
+  // Server: Debug
+  server: {
+    host: '0.0.0.0'
   }
 }
