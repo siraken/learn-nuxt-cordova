@@ -15,6 +15,9 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+        <string>QR/バーコードを読み取るためカメラを利用します</string>
+    </edit-config>
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
