@@ -68,6 +68,7 @@ footer {
   z-index: 20;
   width: 100%;
   border-top: solid 1px #ccc;
+  padding: 0 0 env(safe-area-inset-bottom) 0;
 
   ul {
     display: flex;
