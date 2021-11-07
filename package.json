@@ -7,10 +7,11 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "gen": "nuxt generate",
-    "generate": "nuxt generate && wsl rsync -r --delete dist/ app/www/ && replace '/nuxt/' 'nuxt/' app/www -r",
+    "generate": "nuxt generate && rsync -r --delete dist/ app/www/ && replace '/nuxt/' 'nuxt/' app/www -r",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "cordova-run-android": "cd app && cordova build android && cordova run android"
+    "cordova-run-android": "cd app && cordova build android && cordova run android",
+    "cordova-run-ios": "cd app && cordova build ios && cordova run ios"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
