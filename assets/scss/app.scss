@@ -1,8 +1,12 @@
 /*!
- * Cordova App Using NuxtJS
+ * Cordova App Using Nuxt.js
  * (c) 2021 Kento Shirasawa
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // App
-@import "common";
-@import "transition";
+@import 'common';
+@import 'transition';
