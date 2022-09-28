@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>eGift</h1>
+    <h1 class="text-xl">eGift</h1>
   </div>
 </template>
 

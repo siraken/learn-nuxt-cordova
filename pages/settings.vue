@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Settings</h2>
+    <h2 class="text-xl">Settings</h2>
     <img src="" alt="" id="image" />
     <!-- <button id="take_pictures" @click="takePictures()">写真撮影</button> -->
     <button id="take_pictures" @click="scan()">スキャン</button>

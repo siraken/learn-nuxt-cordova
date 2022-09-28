@@ -1,8 +1,10 @@
-// const JavaScriptObfuscator = require('webpack-obfuscator')
+import type { NuxtConfig } from '@nuxt/types'
 
-export default {
+// const JavaScriptObfuscator = require('webpack-obfuscator')
+// <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+const nuxtConfig: NuxtConfig = {
   ssr: false,
-  // <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
   head: {
     title: 'cordova',
     htmlAttrs: {
@@ -32,9 +34,8 @@ export default {
     // })
   ],
   components: true,
-  transition: 'page',
-  modules: ['@nuxtjs/axios'],
   buildModules: ['@nuxt/postcss8', '@nuxt/typescript-build'],
+  modules: ['@nuxtjs/axios'],
   build: {
     publicPath: '/nuxt/',
     postcss: {
@@ -52,3 +53,5 @@ export default {
   },
   axios: {}
 }
+
+export default nuxtConfig

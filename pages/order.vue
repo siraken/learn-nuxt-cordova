@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Order</h1>
+    <h1 class="text-xl">Order</h1>
   </div>
 </template>
 
