@@ -9,7 +9,11 @@
         <i></i>
       </section>
     </div>
-    <a href="#" class="border border-green-700 text-green-700 rounded-full px-3 py-1 font-bold ml-5">Edit</a>
+    <a
+      href="#"
+      class="border border-green-700 text-green-700 rounded-full px-3 py-1 font-bold ml-5"
+      >Edit</a
+    >
   </div>
 </template>
 

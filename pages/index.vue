@@ -3,11 +3,7 @@
     <!-- rewards -->
     <section class="rewards">
       <div>
-        <h2
-          class="font-bold"
-        >
-          Rewards
-        </h2>
+        <h2 class="font-bold">Rewards</h2>
         <p class="score">
           176.8 <span class="slash">/</span> <span class="nextScore">250</span>
         </p>
@@ -22,7 +18,7 @@
       <div>
         <small class="title">Mobile Order & Pay</small>
         <h2>
-          レジに並ばず、<br>
+          レジに並ばず、<br />
           お店で受け取り
         </h2>
         <a href="#" class="rounded-full">オーダーする</a>
@@ -33,7 +29,7 @@
       <div>
         <small class="title">Mobile Order & Pay</small>
         <h2>
-          レジに並ばず、<br>
+          レジに並ばず、<br />
           お店で受け取り
         </h2>
         <a href="#" class="rounded-full">オーダーする</a>
@@ -44,7 +40,7 @@
       <div>
         <small class="title">Mobile Order & Pay</small>
         <h2>
-          レジに並ばず、<br>
+          レジに並ばず、<br />
           お店で受け取り
         </h2>
         <a href="#" class="rounded-full">オーダーする</a>
@@ -55,7 +51,7 @@
       <div>
         <small class="title">Mobile Order & Pay</small>
         <h2>
-          レジに並ばず、<br>
+          レジに並ばず、<br />
           お店で受け取り
         </h2>
         <a href="#" class="rounded-full">オーダーする</a>
@@ -66,7 +62,7 @@
       <div>
         <small class="title">Mobile Order & Pay</small>
         <h2>
-          レジに並ばず、<br>
+          レジに並ばず、<br />
           お店で受け取り
         </h2>
         <a href="#" class="rounded-full">オーダーする</a>
@@ -79,25 +75,23 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       info: []
     }
   },
-  async fetch () {
+  async fetch() {
     this.info = await fetch(
       'https://script.google.com/macros/s/AKfycbxezm-94sqtfbuvEyJZJ_y8lZ4MIyy2UuBzxjAGsZrUSF9nTeN8pya_LT1ExadxO1bJ/exec'
-    ).then(res => res.json())
+    ).then((res) => res.json())
   },
-  mounted () {
-
-  }
+  mounted() {}
 }
 </script>
 
 <style lang="scss" scoped>
 section {
-  margin: 0 0 .5rem 0;
+  margin: 0 0 0.5rem 0;
 }
 .rewards {
   background: #00381c;
@@ -126,7 +120,7 @@ section {
   a {
     background: transparent;
     color: #fff;
-    padding: .25rem .75rem;
+    padding: 0.25rem 0.75rem;
     border: solid 1px #fff;
     font-weight: bold;
     line-height: 1;
@@ -143,7 +137,7 @@ section {
   .title {
     color: #ccc;
     text-transform: uppercase;
-    font-size: .65rem;
+    font-size: 0.65rem;
     font-weight: bold;
   }
 
@@ -157,7 +151,7 @@ section {
   a {
     background: #fff;
     color: #35180a;
-    padding: .25rem .75rem;
+    padding: 0.25rem 0.75rem;
     font-weight: bold;
     line-height: 1;
   }

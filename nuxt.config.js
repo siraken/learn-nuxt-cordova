@@ -34,11 +34,7 @@ export default {
   components: true,
   transition: 'page',
   modules: ['@nuxtjs/axios'],
-  buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxt/postcss8'
-    // '@nuxt/typescript-build'
-  ],
+  buildModules: ['@nuxt/postcss8', '@nuxt/typescript-build'],
   build: {
     publicPath: '/nuxt/',
     postcss: {
@@ -47,9 +43,6 @@ export default {
         autoprefixer: {}
       }
     }
-  },
-  generate: {
-    // dir: 'app/www'
   },
   router: {
     mode: 'hash'

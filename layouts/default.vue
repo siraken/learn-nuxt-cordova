@@ -8,20 +8,20 @@
 
 <script>
 export default {
-  mounted () {
+  mounted() {
     document.addEventListener('deviceready', this.onDeviceReady, false)
   },
   methods: {
-    onDeviceReady () {
+    onDeviceReady() {
       // Cordova is now initialized. Have fun!
 
       // document.getElementById('devinfo').innerHTML = navigator.camera
-      console.log('Running cordova-' + cordova.platformId + '@' + cordova.version)
+      console.log(
+        'Running cordova-' + cordova.platformId + '@' + cordova.version
+      )
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
