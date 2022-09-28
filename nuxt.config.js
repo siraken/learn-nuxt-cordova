@@ -49,7 +49,7 @@ export default {
     }
   },
   generate: {
-    dir: 'app/www'
+    // dir: 'app/www'
   },
   router: {
     mode: 'hash'
