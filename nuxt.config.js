@@ -1,8 +1,7 @@
-export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+// const JavaScriptObfuscator = require('webpack-obfuscator')
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
+export default {
+  ssr: false,
   /*
   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
   */
@@ -19,14 +18,21 @@ export default {
       },
       { name: 'msapplication-tap-highlight', content: 'no' },
       { name: 'color-scheme', content: 'light dark' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { hid: 'description', name: 'description', content: '' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [{ src: 'cordova.js', body: true }]
   },
   css: ['@/assets/scss/app.scss'],
-  plugins: [],
+  plugins: [
+    // new JavaScriptObfuscator({
+    //   stringArrayEncoding: true,
+    //   stringArrayThreshold: 1,
+    //   deadCodeInjection: true,
+    //   deadCodeInjectionThreshold: 0.2
+    // })
+  ],
   components: true,
   transition: 'page',
   buildModules: ['@nuxtjs/eslint-module', '@nuxt/postcss8'],
