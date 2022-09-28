@@ -2,9 +2,7 @@
 
 export default {
   ssr: false,
-  /*
-  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
-  */
+  // <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
   head: {
     title: 'cordova',
     htmlAttrs: {
@@ -35,9 +33,12 @@ export default {
   ],
   components: true,
   transition: 'page',
-  buildModules: ['@nuxtjs/eslint-module', '@nuxt/postcss8'],
   modules: ['@nuxtjs/axios'],
-  axios: {},
+  buildModules: [
+    '@nuxtjs/eslint-module',
+    '@nuxt/postcss8'
+    // '@nuxt/typescript-build'
+  ],
   build: {
     publicPath: '/nuxt/',
     postcss: {
@@ -47,14 +48,14 @@ export default {
       }
     }
   },
-
-  // Router
+  generate: {
+    dir: 'app/www'
+  },
   router: {
     mode: 'hash'
   },
-
-  // Server: Debug
   server: {
     host: '0.0.0.0'
-  }
+  },
+  axios: {}
 }
