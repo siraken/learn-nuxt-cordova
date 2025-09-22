@@ -5,7 +5,7 @@
       <p class="mb-1 font-bold text-green-700">Refresh balance</p>
     </div>
     <div class="flex flex-col justify-center items-center mb-5">
-      <section class="card shadow-2xl border rounded-md p-3 mx-3">
+      <section class="shadow-2xl border rounded-md p-3 mx-3 max-w-full w-80 h-44" style="background: #003b25;">
         <i></i>
       </section>
     </div>
@@ -18,14 +18,8 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
-<style lang="scss" scoped>
-.card {
-  max-width: 100%;
-  width: 300px;
-  height: 180px;
-  background: #003b25;
-}
+<style scoped>
 </style>

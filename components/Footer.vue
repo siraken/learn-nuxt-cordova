@@ -1,37 +1,38 @@
 <template>
-  <footer>
-    <ul>
+  <footer class="bg-white fixed left-0 bottom-0 z-20 w-full border-t border-gray-300" style="padding: 0 0 env(safe-area-inset-bottom) 0;">
+    <ul class="flex flex-row items-center justify-evenly text-xs leading-none">
       <li>
-        <nuxt-link to="/" :class="{ selected: $route.path === '/' }">
+        <nuxt-link to="/" :class="{ 'text-green-600': $route.path === '/' }" class="text-gray-500 flex justify-center items-center flex-col text-xl py-2 px-4">
           <i class="fas fa-fw fa-star" />
-          <span>Home</span>
+          <span class="text-xs mt-1">Home</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/pay" :class="{ selected: $route.path === '/pay' }">
+        <nuxt-link to="/pay" :class="{ 'text-green-600': $route.path === '/pay' }" class="text-gray-500 flex justify-center items-center flex-col text-xl py-2 px-4">
           <i class="fas fa-fw fa-credit-card" />
-          <span>Pay</span>
+          <span class="text-xs mt-1">Pay</span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link
           to="/stores"
-          :class="{ selected: $route.path === '/stores' }"
+          :class="{ 'text-green-600': $route.path === '/stores' }"
+          class="text-gray-500 flex justify-center items-center flex-col text-xl py-2 px-4"
         >
           <i class="fas fa-fw fa-store" />
-          <span>Stores</span>
+          <span class="text-xs mt-1">Stores</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/order" :class="{ selected: $route.path === '/order' }">
+        <nuxt-link to="/order" :class="{ 'text-green-600': $route.path === '/order' }" class="text-gray-500 flex justify-center items-center flex-col text-xl py-2 px-4">
           <i class="fas fa-fw fa-mug-hot" />
-          <span>Order</span>
+          <span class="text-xs mt-1">Order</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/egift" :class="{ selected: $route.path === '/egift' }">
+        <nuxt-link to="/egift" :class="{ 'text-green-600': $route.path === '/egift' }" class="text-gray-500 flex justify-center items-center flex-col text-xl py-2 px-4">
           <i class="fas fa-fw fa-gift" />
-          <span>eGift</span>
+          <span class="text-xs mt-1">eGift</span>
         </nuxt-link>
       </li>
     </ul>
@@ -39,51 +40,10 @@
 </template>
 
 <script>
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
 
-export default {}
+export default {};
 </script>
 
-<style lang="scss" scoped>
-footer {
-  background: #fff;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 20;
-  width: 100%;
-  border-top: solid 1px #ccc;
-  padding: 0 0 env(safe-area-inset-bottom) 0;
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 0.75rem;
-    line-height: 1;
-
-    li {
-      a {
-        span {
-          font-size: 0.75rem;
-          margin: 4px 0 0 0;
-        }
-
-        &.selected {
-          color: green;
-        }
-        color: #777;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-size: 1.25rem;
-        padding: 0.5rem 1rem;
-      }
-    }
-  }
-}
-</style>

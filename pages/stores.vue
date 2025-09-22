@@ -14,14 +14,14 @@
 export default {
   data() {
     return {
-      users: []
-    }
+      users: [],
+    };
   },
   methods: {
     async fetchUsers() {
-      const res = await fetch('https://jsonplaceholder.typicode.com/users')
-      this.users = await res.json()
-    }
-  }
-}
+      const res = await fetch('https://jsonplaceholder.typicode.com/users');
+      this.users = await res.json();
+    },
+  },
+};
 </script>

@@ -1,19 +1,8 @@
 <template>
-  <div class="balance rounded-full">￥1,280 on card</div>
+  <div class="bg-green-600 text-white py-3 px-4 fixed bottom-20 right-4 z-10 rounded-full">￥1,280 on card</div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
-<style lang="scss" scoped>
-.balance {
-  background: #00a800;
-  color: #fff;
-  padding: 0.75rem 1rem;
-  position: fixed;
-  bottom: 5rem;
-  right: 1rem;
-  z-index: 10;
-}
-</style>
