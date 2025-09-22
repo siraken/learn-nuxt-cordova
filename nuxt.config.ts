@@ -1,4 +1,4 @@
-import type { NuxtConfig } from '@nuxt/types'
+import type { NuxtConfig } from '@nuxt/types';
 
 // const JavaScriptObfuscator = require('webpack-obfuscator')
 // <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
@@ -8,21 +8,21 @@ const nuxtConfig: NuxtConfig = {
   head: {
     title: 'cordova',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       {
         name: 'viewport',
-        content: 'initial-scale=1, width=device-width, viewport-fit=cover'
+        content: 'initial-scale=1, width=device-width, viewport-fit=cover',
       },
       { name: 'msapplication-tap-highlight', content: 'no' },
       { name: 'color-scheme', content: 'light dark' },
       { name: 'format-detection', content: 'telephone=no' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [{ src: 'cordova.js', body: true }]
+    script: [{ src: 'cordova.js', body: true }],
   },
   css: ['@/assets/scss/app.scss'],
   plugins: [
@@ -39,19 +39,21 @@ const nuxtConfig: NuxtConfig = {
   build: {
     publicPath: '/nuxt/',
     postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {}
-      }
-    }
+      postcssOptions: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
+      },
+    },
   },
   router: {
-    mode: 'hash'
+    mode: 'hash',
   },
   server: {
-    host: '0.0.0.0'
+    host: '0.0.0.0',
   },
-  axios: {}
-}
+  axios: {},
+};
 
-export default nuxtConfig
+export default nuxtConfig;
