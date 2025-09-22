@@ -24,7 +24,7 @@ const nuxtConfig: NuxtConfig = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [{ src: 'cordova.js', body: true }],
   },
-  css: ['@/assets/scss/app.css'],
+  css: ['@/assets/css/app.css'],
   plugins: [
     // new JavaScriptObfuscator({
     //   stringArrayEncoding: true,
