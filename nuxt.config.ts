@@ -1,6 +1,10 @@
 import { defineNuxtConfig } from 'nuxt/config';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  srcDir: '.',
+  dir: {
+    app: '.'
+  },
   ssr: false,
   app: {
     head: {
@@ -23,7 +27,7 @@ export default defineNuxtConfig({
       // script: [{ src: 'cordova.js', body: true }],
     },
   },
-  css: ['@/assets/css/app.css'],
+  css: ['~/assets/css/app.css'],
   components: true,
   modules: ['@nuxtjs/tailwindcss'],
   nitro: {
