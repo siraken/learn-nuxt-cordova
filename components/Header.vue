@@ -12,16 +12,15 @@
           </p>
         </div>
         <div>
-          <nuxt-link to="/settings">
+          <NuxtLink to="/settings">
             <i class="fas fa-fw fa-cog" />
-          </nuxt-link>
+          </NuxtLink>
         </div>
       </div>
     </header>
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
 </script>
 
