@@ -1,25 +1,24 @@
 <template>
   <div>
     <Header />
-    <Nuxt />
+    <slot />
     <Footer />
   </div>
 </template>
 
-<script>
-export default {
-  mounted() {
-    document.addEventListener('deviceready', this.onDeviceReady, false);
-  },
-  methods: {
-    onDeviceReady() {
-      // Cordova is now initialized. Have fun!
+<script setup>
+onMounted(() => {
+  document.addEventListener('deviceready', onDeviceReady, false);
+});
 
-      // document.getElementById('devinfo').innerHTML = navigator.camera
-      console.log(`Running cordova-${cordova.platformId}@${cordova.version}`);
-    },
-  },
-};
+function onDeviceReady() {
+  // Cordova is now initialized. Have fun!
+  // document.getElementById('devinfo').innerHTML = navigator.camera
+  const w = window;
+  if (w.cordova) {
+    console.log(`Running cordova-${w.cordova.platformId}@${w.cordova.version}`);
+  }
+}
 </script>
 
 <style scoped></style>

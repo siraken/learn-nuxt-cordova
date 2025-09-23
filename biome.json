@@ -1,4 +1,4 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
-	"extends": ["@novalumo/biome-config"]
+  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+  "extends": ["@novalumo/biome-config"]
 }
