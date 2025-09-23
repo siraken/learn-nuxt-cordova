@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a hybrid mobile app built with **Nuxt.js 2** and **Apache Cordova**, targeting both Android and iOS platforms.
 
-- **Package Manager**: `pnpm` (primary) or `bun` (alternative, based on lock files present)
+- **Package Manager**: `bun`
 - **Linting**: Uses Biome with `@novalumo/biome-config` preset
 - **TypeScript**: Enabled with Nuxt TypeScript build module
 - **Styling**: SCSS with Tailwind CSS
@@ -15,14 +15,14 @@ This is a hybrid mobile app built with **Nuxt.js 2** and **Apache Cordova**, tar
 
 ```bash
 # Development
-pnpm dev              # Start Nuxt development server
-pnpm build           # Build Nuxt app for production
-pnpm generate        # Generate static files and sync to Cordova
+bun run dev              # Start Nuxt development server
+bun run build           # Build Nuxt app for production
+bun run generate        # Generate static files and sync to Cordova
 
 # Mobile Development
-pnpm cordova [command]  # Run Cordova commands from app directory
-pnpm run-android        # Build and run on Android
-pnpm run-ios           # Build and run on iOS
+bun run cordova [command]  # Run Cordova commands from app directory
+bun run run-android        # Build and run on Android
+bun run run-ios           # Build and run on iOS
 
 # Code Quality
 npx biome check        # Run Biome linter/formatter
