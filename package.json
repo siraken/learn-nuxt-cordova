@@ -6,10 +6,10 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "start": "nuxt preview",
-    "generate": "nuxt generate && rsync -r --delete dist/ app/www/ && find app/www -name '*.html' -exec sed -i '' 's|/nuxt/|nuxt/|g' {} +",
-    "cordova": "cd app && cordova",
-    "android": "cd app && cordova build android && cordova run android",
-    "ios": "cd app && cordova build ios && cordova run ios"
+    "generate": "nuxt generate && rsync -r --delete dist/ cordova/www/ && find cordova/www -name '*.html' -exec sed -i '' 's|/nuxt/|nuxt/|g' {} +",
+    "cordova": "cd cordova && cordova",
+    "android": "cd cordova && cordova build android && cordova run android",
+    "ios": "cd cordova && cordova build ios && cordova run ios"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
