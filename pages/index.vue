@@ -132,16 +132,6 @@
 </template>
 
 <script setup>
-const info = ref([]);
-
-const { data } = await $fetch(
-  "https://script.google.com/macros/s/AKfycbxezm-94sqtfbuvEyJZJ_y8lZ4MIyy2UuBzxjAGsZrUSF9nTeN8pya_LT1ExadxO1bJ/exec"
-);
-
-console.log(data);
-
-info.value = data;
-
 onMounted(() => {
   // mounted logic here
 });
