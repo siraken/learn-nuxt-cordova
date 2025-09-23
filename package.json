@@ -8,8 +8,8 @@
     "start": "nuxt preview",
     "generate": "nuxt generate && rsync -r --delete dist/ app/www/ && find app/www -name '*.html' -exec sed -i '' 's|/nuxt/|nuxt/|g' {} +",
     "cordova": "cd app && cordova",
-    "run-android": "cd app && cordova build android && cordova run android",
-    "run-ios": "cd app && cordova build ios && cordova run ios"
+    "android": "cd app && cordova build android && cordova run android",
+    "ios": "cd app && cordova build ios && cordova run ios"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
